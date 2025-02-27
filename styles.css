@@ -1,0 +1,134 @@
+:root {
+  --gray-00: #ffffff;
+  --gray-05: #f8f9fa;
+  --gray-15: #ced4da;
+  --gray-75: #495057;
+  --gray-85: #343a40;
+  --gray-90: #212529;
+  --blue-50: #0d6efd;
+  --error: #dc3545;
+  --danger-color: #842029;
+  --danger-background: #f8d7da;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  background-color: var(--gray-90);
+  color: var(--gray-05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+  background: var(--gray-85);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  height: 38px;
+  width: 60px;
+  border: 2px solid var(--gray-15);
+  border-radius: 5px;
+  background: var(--gray-05);
+  color: var(--gray-90);
+}
+
+button {
+  cursor: pointer;
+  margin-top: 15px;
+  background: var(--blue-50);
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.output-container {
+  width: 100%;
+  min-height: 55px;
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--gray-75);
+  border-radius: 5px;
+  color: var(--gray-00);
+  font-size: 1.2em;
+}
+
+.output-array {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.output-value {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.alert {
+  background-color: var(--danger-background);
+  border: 2px solid var(--danger-color);
+  color: var(--danger-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 550px) {
+  main {
+    width: 100%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .output-value {
+    font-size: 1.5em;
+  }
+}
